@@ -41,17 +41,33 @@ button:hover {
   width: 80%;
   max-width: 600px;
 }
-.item div {
+.item .task-item {
   background-color: white;
   padding: 1em;
   margin: 0.5em 0;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.item div.show {
+.item .task-item.show {
   opacity: 1;
   transform: translateY(0);
+}
+.item .task-item .remove-button {
+  margin-left: auto;
+  padding: 0.5em;
+  border: none;
+  background-color: #ff7e5f;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.item .task-item .remove-button:hover {
+  background-color: #feb47b;
 }
